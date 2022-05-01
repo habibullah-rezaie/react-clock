@@ -1,5 +1,4 @@
 #! /bin/env node
-// const { exec } = require("child_process");
 const { spawn } = require("child_process");
 
 const serveScript = spawn("npm", ["run", "serve"]);
@@ -17,9 +16,3 @@ serveScript.on("error", (error) => {
 serveScript.on("exit", () => {
   browser.kill();
 });
-// const stopwatchServe = spawn("xdg-open", ['http://localhost:3000']);
-
-// stopwatchServe.on('error', (err) => {
-//   console.error(err)
-//   stopwatchServe.kill()
-// })
