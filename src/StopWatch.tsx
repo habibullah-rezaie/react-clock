@@ -1,6 +1,8 @@
 import "./App.css";
 import React from "react";
 import { formatTime } from "./utils/time";
+import { useStopWatch } from "./utils/hooks/time";
+
 
 
 function StopWatch() {
@@ -8,7 +10,6 @@ function StopWatch() {
     useStopWatch();
 
   React.useEffect(() => {
-    document.title = "Stopwatch";
     const spaceKeyDownEv = (ev: KeyboardEvent): void => {
       if (ev.key === " ") {
         changeIsPaused();
